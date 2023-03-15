@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Care</title>
+    <!-- Custom CSS -->    
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d027480c9c.js" crossorigin="anonymous" defer></script> 
+    <!-- JavaScript -->   
+    <script src="shop.js" defer></script>
+    <!-- Browser's Tab icon --> 
+    <link rel="icon" href="./images/catcare_logo.png">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="main-header">
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg px-4">
+            <!-- Brand Logo -->
+            <a href="#main-header" class="navbar-brand"> 
+                <img src="./images/catcare_logo.png" class="img-fluid" alt="main logo"/>
+            </a>
+                <!-- Phone Number -->
+                <div class="nav-info align-items-center d-flex justify-content-between mx-lg-5">
+                    <span class="d-none d-md-block info-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="d-none d-md-block mb-0">+66 012-345-6789</p>
+                </div>
+                <!-- Cart -->
+                <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                    <span class="cart-info-icon mx-2">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="d-none d-md-block text-capitalize mb-0">
+                        <span id="item-count">0</span> 
+                        items - £
+                        <span class="item-total">0.00</span>
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Main Navigation Links-->
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav text-capitalize mx-auto">
+                    <li class="nav-item active">
+                        <a href="#main-header" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#about" class="nav-link">about us</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#products" class="nav-link">products</a>
+                    </li>
+                </ul>
+            </div>    
+        </nav>
+        
+        <!-- Banner Section-->
+        <div class="container-fluid">
+            <div class="row banner justify-content-center align-items-center">
+                <div class="col-10 mx-auto banner-info text-center">
+                    <h1 class="text-capitalize">Welcome to <strong class="banner-title">Cat Care!</strong></h1>
+                    <a href="#products" class="btn banner-link text-uppercase  my-2">explore the product 😄 </a>
+                </div>
+                
+            <!-- Open Cart -->
+            <div class="open-cart position-fixed" id="open-cart">
+
+            <!-- Total -->
+            <div class="cart-total d-flex justify-content-around text-capitalize mt-5" >
+                <h5>total</h5>
+                <h5>£<strong id="cart-total" class="font-weight-bold">0.00</strong></h5>
+            </div>
+
+            <!-- Open Cart Buttons -->
+           <div class="d-flex justify-content-between mt-3 text-uppercase">
+               <a href="#" class="btn btn-black cart-item-btn">checkout</a>
+                <a href="" class="btn btn-red cart-item-btn">clear cart</a>
+            </div>
+        </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h2 class="text-capitalize">about <strong class="banner-title">us</strong></h2>
+                    <p class="my-4 w-75 text-muted">We, Cat Care! are always available for your cat's happy life by providing their neccesaries such as BEST cat's food, treats, toys, cat's litter and many more by good brands. Our products will make you cat at ease and happy!! And we sell our products in pound sterling (£) feel free to use paypal or your credit card to pay!</p>
+                    <a href="#products" class="btn btn-black text-uppercase">explore the product 😄</a>
+                </div>
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <div class="about-img-container">
+                        <img src="./images/aboutcatcare.jpeg" alt="caboutus_cat" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <!-- Products Section-->
+    <section id="products">
+        <div class="container">
+           
+            <!-- Section Title -->
+            <div class="row">
+                <div class="col-10 mx-auto col-xs-6 text-center">
+                    <h2 class="text-capitalize">our <strong class="banner-title">products</strong></h2>
+                </div>
+            </div>
+           
+        <!-- Product Items -->
+        <div class="container">
+            <div class="row product-items py-5" id="product-items">
+
+                <!-- 1st item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product1_bestFood.png" alt="kitten food" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name"> Kitten's Food by Purina </h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 5.25</strong></h5>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <!-- 2nd item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="./images/product2_bestFood.jpeg" alt="cat food" class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">Cat's Food by Purina</h5>
+                            <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 5.60</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+                <!-- 3rd item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product3_besttreat.jpeg" alt="treat" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Delicious Treat by Ciao</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 2.15</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 4th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product4_toys.jpeg" alt="toys" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Feather Teaser Toy</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 0.60</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 5th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product5_laser.jpeg" alt="laser" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Automatic Pointing Laser</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 6.55</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 6th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product6_minitreehouse.jpg" alt="tree house" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Mini TreeHouse for Cat</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 6.70</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 7th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product7_catnipball.jpg" alt="catnip ball" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Catnip Ball</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 0.30</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <!-- 8th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product8_grooming gloves.jpg" alt="grooming gloves" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Grooming Gloves</h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 1.00</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 9th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./images/product9_doublebowl.jpeg" alt="doublebowl" class="card-img-top product-img">
+                            <span class="product-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="product-item-name">Double Bowl </h5>
+                                <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold"> 4.35</strong></h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    </div>
+                <!-- 10th item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 product-item food-item" data-item="food-item">
+                <div class="card single-item">
+                    <div class="img-container">
+                        <img src="./images/product10_litterbox.jpeg" alt="litter" class="card-img-top product-img">
+                        <span class="product-item-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="product-item-name">Automatic Litter Box by Xiaomi</h5>
+                            <h5 class="product-item-value">£<strong id="store-item-price" class="font-weight-bold">65</strong></h5>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
